@@ -1,0 +1,22 @@
+// Clearfix.
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Box shadows.
+@mixin box-shadow($y: 0, $x: 0, $blur: 5px, $color: rgba(0, 0, 0, .2)) {
+  -webkit-box-shadow: $y $x $blur $color;
+  -moz-box-shadow: $y $x $blur $color;
+  box-shadow: $y $x $blur $color;
+}
+
+// SVG BG.
+@mixin svg-bg($name, $extension: png, $color: transparent, $position: 0 0, $repeat: no-repeat) {
+  background: url(images/#{$name}.#{$extension}) $color $position $repeat;
+  background: none, url(images/#{$name}.svg) $color $position $repeat;
+}

@@ -1,0 +1,142 @@
+// Game wrapper.
+.whqtrump-wrapper {
+  @include clearfix;
+}
+
+// Game filter.
+.whqtrump-sort-wrapper {
+  @media only screen and (min-width: $mobile) {
+    width: 15%;
+    padding-right: 1em;
+    float: left;
+  }
+}
+
+// Game deck.
+.whqtrump {
+  @extend .flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+  @media only screen and (min-width: $mobile) {
+    float: left;
+    width: 85%;
+  }
+  // Trump card.
+  &--card {
+    position: relative;
+    flex-grow: 1;
+    margin: 1%;
+    border-radius: 2px;
+    @include box-shadow;
+    background-color: rgba(255, 255, 255, .8);
+    // Included to clear children floats.
+    @include clearfix;
+    @media only screen and (min-width : 20em) {
+      width: 100%;
+    }
+    // Mobile.
+    @media only screen and (min-width: $mobile) {
+      width: 48%;
+    }
+    // Tablet.
+    @media only screen and (min-width : $tablet) {
+      width: 31%;
+    }
+  }
+  &--list {
+    width: 100%;
+    header {
+      float: left;
+      margin-right: 10px;
+      max-width: calc(30% - 10px);
+    }
+    dl {
+      float: left;
+      margin: 0;
+      width: 70%;
+    }
+  }
+}
+
+.whqtrump--card-content {
+  padding-right: 2%;
+  padding-left: 2%;
+  background-color: $white;
+  dl {
+    margin: 0;
+  }
+}
+
+// Card intro (Image and title)
+.whqtrump--intro {
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+  h3 {
+    margin-top: 0;
+    padding: 0 8px;
+    color: $white;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: $charcoal;
+  }
+  p {
+    padding: 0 1%;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+
+// Sorting.
+.whq-deck-sort {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+// Stats.
+[data-stat='stat'] {
+  margin-bottom: 8px;
+  margin-left: 0;
+  width: 100%;
+  height: 8px;
+  text-align: right;
+  background-color: #CCC;
+}
+
+// Stat progress bars.
+.whqtrump-stat {
+  // Base width: JS to set full width.
+  width: 5%;
+  height: 100%;
+  padding-right: 10px;
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  &-speed {
+    background-color: $stat-green;
+  }
+  &-jump {
+    background-color: $stat-yellow;
+  }
+  &-attack {
+    background-color: $stat-orange;
+  }
+  &-special {
+    background-color: $stat-red;
+  }
+  &-arms {
+    background-color: $stat-purple;
+  }
+  &-defense {
+    background-color: $stat-blue;
+  }
+}
+
+

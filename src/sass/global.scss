@@ -1,0 +1,20 @@
+// Stylesheet for WHQ Trumps.
+
+// Global components.
+@import "components/mixins";
+
+// Globals
+@import "globals/variables";
+@import "globals/flex";
+@import "globals/core";
+@import "globals/grid";
+@import "globals/forms";
+
+// Partials
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/page";
+@import "partials/footer";
+
+// Trumps game.
+@import "trumps/trumps";

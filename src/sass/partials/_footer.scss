@@ -1,0 +1,11 @@
+footer {
+  &.global {
+    margin-top: 50px;
+    padding: 35px 0;
+    font-size: .8rem;
+    letter-spacing: .1em;
+    color: $white;
+    background-color: $grey;
+    @include clearfix;
+  }
+}

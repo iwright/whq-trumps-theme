@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  color: $charcoal;
+  line-height: 1.75rem;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  background-color: #FAFAFA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $charcoal;
+}
+
+// Global links.
+a {
+  color: $charcoal;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Primary nav links
+.current-menu-item {
+  a {
+    color: $green;
+    text-decoration: none;
+  }
+}
